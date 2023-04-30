@@ -15,9 +15,13 @@ def hello():
 
 
 @app.route("/base.html")
-def hello_base():
+def base():
      return render_template("base.html")
 
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    return render_template("register.html")
 
 
 if __name__ == "__main__" :
